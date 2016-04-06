@@ -1,0 +1,267 @@
+footer {
+    @include make-row;
+
+    @media (min-width: $screen-desktop) {
+        margin: 200px 0 0 0;
+    }
+
+    margin: 100px 0 0 0;
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(218, 218, 218, 1) 0%, rgba(218, 218, 218, 0) 7.14%, #e7e7e7 7.14%, #e7e7e7 7.14%, #e7e7e7 100%);
+    background-color: #e7e7e7;
+    color: #8c8c8c;
+    min-height: 140px;
+    clear: both;
+    padding: 40px 0 15px 0;
+
+    @media (max-width: $screen-tablet) {
+        min-height: 280px;
+        padding: 50px 0 10px 0;
+    }
+
+    @media (max-width: $screen-phone) {
+        font-size: 2rem;
+    }
+
+    #footer-wrap {
+        @media (min-width: $screen-tablet) {
+            max-width: $container-md;
+            margin: 0 auto;
+            float: none;
+            text-align: center;
+        }
+
+        #foot-row1 {
+            margin: 0 auto;
+            float: none;
+
+            @media (max-width: $screen-tablet) {
+                width: 100%;
+            }
+
+            .footer-hq {
+                float: none;
+                margin: 0 auto;
+                font-weight: bold;
+
+                nav {
+                    float: none;
+                    display: inline-block;
+
+                    @media (max-width: $screen-phone) {
+                        float: none;
+                        display: inline-block;
+                        font-size: 20px !important;
+                        margin-bottom: 30px;
+                    }
+
+                    ul {
+                        float: none;
+                        display: inline-block;
+
+                        @media (max-width: $screen-phone) {
+                            float: none;
+                            display: inline-block;
+                            margin: 0px auto 0px 8px;
+                        }
+
+                        li.hq {
+                            padding-top: 0;
+
+                            @media (max-width: $screen-phone) {
+                                width: 100%;
+                                text-align: center;
+                                font-family: Slate Pro Medium !important;
+                                color: #585858;
+                                font-size: 20px !important;
+                            }
+                        }
+
+                        li.foot {
+                            @media (max-width: $screen-tablet) {
+                                display: block;
+
+                                //clear: both;
+                            }
+
+                            @media (max-width: $screen-phone) {
+                                margin-left: 16%;
+                            }
+                        }
+
+                        li {
+                            float: left;
+                            margin-right: 11px;
+                            position: relative;
+                            text-align: left;
+                            font-size: 1.5rem;
+
+                            @media (max-width: $screen-phone) {
+                                margin-right: 8px;
+                            }
+
+                            a {
+                                display: block;
+
+                                @media (max-width: $screen-phone) {
+                                    font-family: Slate Pro BK !important;
+                                    color: #585858;
+                                    font-size: 1.5rem;
+                                }
+                            }
+
+                       
+                            a.icon-phone:before {
+                                @extend .fa;
+
+                                content: "\f095";
+                                padding-right: 5px;
+
+                                @media (max-width: $screen-tablet) {
+                                    font-size: 2.1rem;
+                                }
+                            }
+
+                            a.icon-phone:after {
+                                @extend .fa;
+
+                                content: "\f0d7";
+                                padding-left: 5px;
+                            }
+
+                            a.icon-phone.ss:after {
+                                @extend .fa;
+
+                                content: "\f0d8";
+                                padding-left: 5px;
+                            }
+
+                            ul {
+                                display: none;
+                                position: relative;
+                                top: 0;
+                                left: 0px;
+
+                                li {
+                                    clear: both;
+                                    float: left;
+                                    width: 220px;
+                                    text-align: left;
+
+                                    @media (max-width: $screen-phone) {
+                                        width: 150px;
+                                    }
+
+                                    a {
+                                        display: block;
+
+                                        span {
+                                            font-weight: bold;
+                                        }
+                                    }
+
+                                    a.icon-phone {
+                                        padding: 0 10px;
+                                    }
+                                }
+                            }
+                        }
+
+                        li.ull {
+                            width: 110px;
+                            margin-right: 0px;
+
+                            @media (max-width: $screen-phone) {
+                                width: 136px;
+                                margin-right: 0px;
+                                font-size: 1.5rem;
+                            }
+                        }
+                    }
+                }
+
+                span {
+                    @media (max-width: $screen-tablet) {
+                        clear: both;
+                        display: block;
+                        float: left;
+                    }
+                }
+            }
+
+            .footer-hq li.ull {
+                @media (max-width: $screen-phone) {
+                    margin: 17px 17px 17px 47px;
+                    clear: both;
+                }
+            }
+        }
+
+        #foot-row2 {
+            clear: both;
+            float: none;
+            margin: 0 auto;
+            padding-top: 10px;
+            margin-left: 1%;
+        }
+    }
+
+    a {
+        color: #585858;
+
+        &:hover {
+            color: $dgrey;
+        }
+    }
+}
+
+span.link-listing {
+    @media (max-width: $screen-phone) {
+        clear: both;
+        display: block;
+    }
+
+    span {
+        padding: 0 5px;
+
+        @media (max-width: $screen-phone) {
+            padding: 0px;
+        }
+    }
+
+    span.terms:before {
+        content: "-";
+        padding-right: 10px;
+
+        @media (max-width: $screen-phone) {
+            padding: 4px;
+        }
+    }
+
+    span.terms:after {
+        content: "-";
+        padding-left: 10px;
+
+        @media (max-width: $screen-phone) {
+            padding: 4px;
+        }
+    }
+}
+
+#commonFooter {
+    @media (max-width: $screen-phone) {
+        font-size: 1.3rem;
+    }
+
+    span {
+        @media (max-width: $screen-phone) {
+            //display:block;
+        }
+    }
+}
+
+#foot-row3 {
+    @media (max-width: $screen-phone) {
+        font-size: 1.6rem;
+    }
+}
