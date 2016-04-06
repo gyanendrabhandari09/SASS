@@ -1,0 +1,898 @@
+#product-list-wrap.section-wrap {
+    margin: 0px 0 100px 0;
+}
+
+#electronic-list {
+    h5 {
+        font-family: 'Slate Pro Medium';
+    }
+
+    ul {
+        display: table;
+        padding-bottom: 20px;
+
+        @media (max-width: $screen-phone) {
+            margin-left: 10px;
+        }
+
+        li {
+            float: left;
+            position: relative;
+            vertical-align: middle;
+
+            @include make-xs-column(12);
+
+            @include make-sm-column(4);
+
+            padding: 20px 20px 0 0;
+            position: relative;
+
+            a {
+                display: block;
+                color: #000;
+                text-align: left;
+                float: left;
+                width: 100%;
+                cursor: pointer;
+
+                span.fp-icon {
+                    float: left;
+                    color: $dblue;
+                    border: 1px solid $lblue;
+                    border-radius: 100px;
+                    width: 80px;
+                    height: 80px;
+                    position: relative;
+
+                    @media (max-width: $screen-phone) {
+                        width: 95px;
+                        height: 95px;
+                        font-size: 6rem;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                span.fp-icon-h {
+                    font-family: FontAwesome;
+                    border-radius: 100px;
+                    width: 80px;
+                    height: 80px;
+                    position: absolute;
+                    top: 20px;
+                    left: 0;
+                    display: none;
+
+                    @media (max-width: $screen-phone) {
+                        border: none;
+                    }
+
+                    .inc {
+                        position: absolute;
+                        top: 20px;
+                        left: -20px;
+                        width: 35px;
+                        height: 36px;
+                        background: url("../img/pd-decrease.png") 0 0 no-repeat;
+                        z-index: 111;
+                        cursor: pointer;
+
+                        @media (max-width: $screen-phone) {
+                            left: -20px;
+                            top: 30px;
+                        }
+                    }
+
+                    .desc {
+                        position: absolute;
+                        top: 20px;
+                        right: -15px;
+                        width: 35px;
+                        height: 36px;
+                        background: url("../img/pd-increase.png") 0 0 no-repeat;
+                        z-index: 111;
+                        cursor: pointer;
+
+                        @media (max-width: $screen-phone) {
+                            right: -25px;
+                            top: 30px;
+                        }
+                    }
+
+                    .number {
+                        position: absolute;
+                        top: 30px;
+                        left: 32px;
+                        font-size: 2.5rem;
+                        font-family: Slate Pro Medium;
+                        color: #fff;
+                        font-style: normal;
+                        line-height: 20px;
+
+                        @media (max-width: $screen-phone) {
+                            top: 37px;
+                            left: 37px;
+                        }
+                    }
+                }
+
+                span.fp-icon-h:before {
+                    background-color: red;
+                }
+
+                span.fp-icon-h:after {
+                    @extend .fa;
+
+                    content: "\f00c";
+                    position: absolute;
+                    top: 25px;
+                    left: 25px;
+                    color: #fff;
+                    font-size: 2.9rem;
+
+                    @media (max-width: $screen-phone) {
+                        top: 30px;
+                        left: 35px;
+                    }
+                }
+
+                span.fp-name {
+                    float: left;
+                    margin: 30px 0 0 20px;
+                    line-height: 15px;
+                    font-size: 1.5rem;
+                    max-width: 55%;
+                    cursor: pointer;
+
+                    @media (max-width: $screen-phone) {
+                        float: left;
+                        margin: 40px 0 0 20px;
+                        line-height: 20px;
+                        font-size: 2rem;
+                        max-width: 55%;
+                        cursor: pointer;
+                    }
+                }
+
+                &:hover {}
+            }
+
+            a.focus {
+                span.fp-icon {
+                    background: url("../img/pd-bg2.png") repeat;
+                }
+
+                span.fp-icon-h {
+                    display: block;
+                }
+            }
+
+            a.choose {
+                span.fp-icon {
+                    background: url("../img/pd-bg2.png") repeat;
+                }
+
+                span.fp-icon-h {
+                    display: block;
+                    cursor: pointer;
+                }
+
+                span.fp-icon-h:after {
+                    display: none;
+                }
+            }
+        }
+
+        .fp-icon span {
+            position: absolute;
+        }
+
+        li.icon-exterior .fp-icon span {
+            font-size: 6rem;
+            top: -6px;
+            left: 6px;
+
+            @media (max-width: $screen-phone) {
+                font-size: 7rem;
+                top: -8px;
+                left: 8px;
+            }
+        }
+
+        li.icon-kitchen .fp-icon span {
+            font-size: 5.7rem;
+            top: -2px;
+            left: 10px;
+
+            @media (max-width: $screen-phone) {
+                font-size: 6.6rem;
+                top: -1px;
+                left: 14px;
+            }
+        }
+
+        li.icon-bathroom .fp-icon span {
+            font-size: 7.7rem;
+            top: -22px;
+            left: -1px;
+
+            @media (max-width: $screen-phone) {
+                font-size: 9rem;
+                top: -29px;
+                left: 0;
+            }
+        }
+
+        li.icon-other .fp-icon span {
+            font-size: 5rem;
+            top: 5px;
+            left: 15px;
+
+            @media (max-width: $screen-phone) {
+                font-size: 6rem;
+                top: 5px;
+                left: 16px;
+            }
+        }
+
+        li.icon-unfinished .fp-icon span {
+            font-size: 5.7rem;
+            top: 0;
+            left: 8px;
+
+            @media (max-width: $screen-phone) {
+                font-size: 6.7rem;
+                top: -5px;
+                left: 9px;
+            }
+        }
+
+        li.icon-personal .fp-icon span {
+            font-size: 5rem;
+            top: 2px;
+            left: 13px;
+
+            @media (max-width: $screen-phone) {
+                font-size: 6.7rem;
+                top: 3px;
+                left: 16px;
+            }
+        }
+    }
+
+    .input-btn {
+        input[type="checkbox"] {
+            padding-right: 30px;
+        }
+
+        p {
+            padding-bottom: 30px;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+#damage-property-wrap {
+    #property-image {
+        @include make-sm-column(6);
+
+        position: relative;
+        width: 100%;
+        padding: 0;
+
+        @media (max-width: $screen-desktop) {
+            display: none;
+        }
+
+        .prop-roof {
+            top: 125px;
+            left: 140px;
+        }
+
+        .prop-siding {
+            top: 241px;
+            left: 201px;
+        }
+
+        .prop-windows {
+            top: 190px;
+            left: 244px;
+        }
+
+        .prop-doors {
+            top: 170px;
+            left: 110px;
+        }
+
+        .prop-garage {
+            top: 205px;
+            left: 150px;
+        }
+
+        .prop-foundation {
+            top: 291px;
+            left: 221px;
+        }
+
+        .prop-landscaping {
+            top: 190px;
+            left: 64px;
+        }
+
+        .prop-fence {
+            top: 72px;
+            left: 210px;
+        }
+
+        .prop-shed {
+            top: 28px;
+            left: 304px;
+        }
+
+        .prop-basement {
+            top: 250px;
+            left: 243px;
+        }
+
+        .prop-pool {
+            top: 111px;
+            left: 343px;
+        }
+
+        .prop-porch {
+            top: 170px;
+            left: 297px;
+        }
+
+        .prop-air {
+            top: 208px;
+            left: 284px;
+        }
+
+
+    }
+
+    #damgage-listing-wrap {
+        @media (max-width: $screen-tablet) {
+            padding: 10px 0px 10px 185px;
+        }
+
+        @include make-xs-column(12);
+
+        @include make-md-column(6);
+
+        /* ul {
+            columns: 2;
+            -webkit-columns: 2;
+            -moz-columns: 2;
+        
+            @media (max-width: $screen-phone) {
+                columns: 1; 
+                -webkit-columns: 1;
+                -moz-columns: 1;
+                padding-left: 50px;
+            }
+        } */
+    }
+}
+
+#belongings-wrap {
+    #damage-listing {
+        ul {
+            li {
+                position: relative;
+                padding: 20px 0 20px 130px;
+                float: left;
+                min-height: 80px;
+                width: 50%;
+                text-align: left;
+
+                @media (max-width: $screen-tablet) {
+                    width: 100%;
+                    padding: 20px 0 20px 120px;
+                }
+
+                input {
+                    position: absolute;
+                    left: 100px;
+                    top: 20px;
+
+                    @media (max-width: $screen-phone) {
+                        left: 90px;
+                    }
+                }
+
+                label {
+                    @media (max-width: $screen-phone) {
+                        margin: 5px 0 0 0px;
+                    }
+
+                    .lname{
+                        max-width: 180px;
+                    }
+                }
+            }
+
+            li > span {
+                font-family: "Farmers";
+                font-size: 7rem;
+                color: $dblue;
+                position: absolute;
+                left: 20px;
+                top: 30px;
+                line-height: 25px;
+
+                @media (max-width: $screen-phone) {
+                    top: 27px;
+                    left:0;
+                }
+            }
+        }
+    }
+
+    .input-btn {
+        input {
+            margin-top: 30px;
+        }
+    }
+}
+
+#damage-property-wrap.damage-list {
+    width: 100%;
+}
+
+#contact-us-wrap, #contact-us-wrap2 {
+    @media (max-width: $screen-phone) {
+        width: 100%;
+    }
+
+    .ctc-phone {
+        @media (max-width: $screen-phone) {
+            padding-top: 30px;
+        }
+    }
+
+    margin: 200px auto 20px auto;
+
+    #ctc-text {
+        padding-bottom: 30px;
+        border-bottom: 1px solid $lgrey;
+        width: 100%;
+
+        @include make-row;
+
+        display: table;
+        margin: 0 0 30px 0;
+    }
+
+    h5 {
+        font-size: 1.5rem;
+        font-family: 'Slate Pro BK';
+        font-weight: bold;
+        margin: 0 0 10px 0;
+
+        @media (max-width: $screen-phone) {
+            font-size: 2rem;
+        }
+    }
+
+    .contact-left2 {
+        @include make-xs-column(12);
+
+        @include make-xs-column(4);
+
+        @media (min-width: $screen-phone) {
+            width: 33.33%;
+            float: left;
+            padding: 0 15px;
+        }
+
+        @media (max-width: $screen-phone) {
+            width: 100%;
+        }
+
+        padding: 0 15px;
+        text-align: left;
+
+        @media (max-width: $screen-phone) {
+            clear: both;
+            float: left;
+        }
+
+        .change-value {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .big-font {
+            color: #585858;
+
+            @media (max-width: $screen-phone) {
+                font-size: 2.5rem;
+            }
+        }
+
+        .fade-away {
+            color: #585858;
+
+            @media (max-width: $screen-phone) {
+                font-size: 2rem;
+                padding-bottom: 50px;
+            }
+        }
+    }
+
+    a {
+        font-family: 'Slate Pro Medium';
+    }
+}
+
+.ctc-correspondence ul {
+    padding-bottom: 20px;
+}
+
+.ctc-notification ul {
+    li {
+        padding: 0 0 10px 0;
+        position: relative;
+
+        label {
+            text-align: left;
+            padding: 3px 0 0 30px;
+        }
+
+        input[type="email"], input[type="number"] {
+            width: 210px;
+            float: left;
+            margin-left: 35px;
+        }
+
+        input[type="radio"] {
+            margin-right: 20px;
+            position: absolute;
+            top: 0px;
+            left: 0;
+        }
+
+        input[type="text"] {
+            margin-left: 33px;
+        }
+
+        .validationMessage {
+            padding-left: 33px;
+        }
+
+        .ctc-info {
+            padding: 1px 0 0 31px;
+        }
+    }
+
+    li.fade-away {
+        padding: 0 0 10px 0 !important;
+    }
+
+    li .fade-away {
+        padding: 0 !important;
+    }
+}
+
+#refer-box {
+    .homerepair {
+        @media (max-width: $screen-phone) {
+            float: left;
+            padding: 5px 9px 5px 30px;
+
+            .icons2 {
+                height: 115px;
+                margin-top: -12px;
+            }
+        }
+
+        height: auto !important;
+        min-height: 100%;
+        width: 90%;
+        border: 1px solid #dgrey;
+        -webkit-box-shadow: 2px 2px 5px #000000;
+        -moz-box-shadow: 2px 2px 5px #000000;
+        box-shadow: 2px 2px 5px  #000000;
+        float: left;
+        margin-left: 2%;
+        padding-left: 30px;
+    }
+
+    .icons2 {
+        font-family: "Farmers";
+        font-size: 12rem;
+        float: left;
+        margin: 0px 25px 0px 5px;
+        color: $dblue;
+    }
+
+    .benefitSide {
+        @media (max-width: $screen-phone) {
+            width: 100%;
+            margin-left: 0;
+        }
+
+        float: left;
+        width: 35%;
+        text-align: left;
+        float: left;
+        margin-left: 15%;
+
+        h2 {
+            color: black;
+        }
+    }
+
+    .rightSide {
+        @media (max-width: $screen-phone) {
+            float: none;
+            width: 100%;
+            padding-left: 4px;
+        }
+
+        width: 49%;
+        text-align: left;
+        float: left;
+        padding-left: 9%;
+    }
+
+    li:before {
+        @extend .fa;
+
+        content: "\f058";
+        padding-right: 10px;
+        color: $dblue;
+    }
+
+    .bodyshop-map-wrap {
+        .section-wrap {
+            h5 {
+                font-weight: bold;
+            }
+        }
+    }
+
+    h2 {
+        margin-top: 5%;
+        text-align: left;
+        margin-left: 1%;
+        color: $dblue;
+    }
+
+    p {
+        text-align: left;
+        letter-spacing: 1px;
+        font-family: Slate Pro Medium;
+        color: #585858;
+        font-size: 1.3rem;
+    }
+}
+
+.first_box {
+    background-color: #f1f1f1;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    border-top: none;
+    margin-bottom: 7%;
+}
+
+#contact-us-wrap {
+    position: relative;
+
+    .cr-icon {
+        font-family: Farmers;
+    }
+}
+
+#deductible-box {
+    a {
+        outline: 0px;
+    }
+
+    h5 {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+}
+
+#deductible-box1 {
+    .deductible-table {
+        width: 460px;
+        margin: auto;
+        margin-top: 30px;
+
+        @media (max-width: $screen-phone) {
+            display: block;
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0;
+            padding: 0;
+        }
+
+        thead {
+            background-color: #f1f1f1;
+
+            tr {
+                @media (max-width: $screen-phone) {
+                    position: absolute;
+                    top: -9999px;
+                    left: -9999px;
+                }
+            }
+
+            th {
+                padding: 15px 20px;
+                text-align: left;
+
+                @media (max-width: $screen-phone) {
+                    display: block;
+                    padding-left: 6px;
+                    border: 1px solid $lgrey;
+                }
+            }
+
+            th:first-child {
+                width: 310px;
+            }
+        }
+
+        tbody {
+            @media (max-width: $screen-phone) {
+                display: block;
+            }
+
+            tr {
+                border-bottom: 1px solid $lgrey;
+
+                @media (max-width: $screen-phone) {
+                    display: block;
+                    margin: 0;
+                    padding: 0;
+                    border: 1px solid $lgrey;
+                }
+
+                td {
+                    padding: 15px 20px;
+                    text-align: left;
+
+                    @media (max-width: $screen-phone) {
+                        position: relative;
+                        left: 50%;
+                        display: block;
+                        border: none;
+                        margin: 0;
+                    }
+                }
+
+                td:before {
+                    @media (max-width: $screen-phone) {
+                        position: absolute;
+                        left: -200px;
+                        width: 45%;
+                        padding-right: 10px;
+                        white-space: nowrap;
+                    }
+                }
+
+                td:nth-of-type(1):before {
+                    @media (max-width: $screen-phone) {
+                        content: "Deductibles";
+                    }
+                }
+
+                td:nth-of-type(2):before {
+                    @media (max-width: $screen-phone) {
+                        content: "Amount";
+                    }
+                }
+            }
+
+            tr:last-child {
+                border: none;
+
+                @media (max-width: $screen-phone) {
+                    border: 1px solid $lgrey;
+                }
+            }
+
+            tr:nth-of-type(odd) {
+                @media (max-width: $screen-phone) {
+                    background: #f1f1f1;
+                }
+            }
+        }
+    }
+
+    p {
+        margin-top: 50px;
+    }
+}
+
+#cant-find a, a.link-this {
+    font-family: 'Slate Pro BK';
+    font-weight: bold;
+}
+
+.ext-damage h5 {
+    margin: 0 0 20px 0;
+    font-family: Slate Pro Medium !important;
+}
+
+#damage-property-wrap {
+    #damgage-listing-wrap {
+        @media (max-width: $screen-phone) {
+            padding-left: 0px !important;
+            padding-right: 0px !important;
+        }
+    }
+}
+
+#Basemet_label, #Shed_label, #Window_label, #Air_label, #Deck_label, #Garage_label {
+    @media (max-width: $screen-phone) {}
+}
+
+#displayOtherCounter, #displayCounter {
+    margin-right: 5px;
+}
+
+#damage-listing.form-listing3 li {
+    padding-bottom: 10px;
+    line-height: 20px;
+    position: relative;
+    text-align: left;
+    width: 50%;
+    float: left;
+
+    @media (max-width: $screen-phone) { 
+        clear: both;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+}
+
+#damage-property-wrap.damage-list a{
+            opacity:0;
+        }
+
+#damage-property-wrap.damage-list a.un {
+    -webkit-animation: grow 0.3s;
+    opacity: 0.5;
+}
+
+#damage-property-wrap.damage-list a.dos {
+    -webkit-animation: grow 0.8s;
+    opacity: 0.5;
+}
+
+#damage-property-wrap.damage-list a.tres {
+    -webkit-animation: grow 1s;
+    opacity: 0.5;
+}
+
+#damage-property-wrap.damage-list a.highlight.tres,#damage-property-wrap.damage-list a.highlight.dos,#damage-property-wrap.damage-list a.highlight.un{
+    opacity: 1;
+}
+
+@-webkit-keyframes grow {
+    0% {
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -o-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -o-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+
